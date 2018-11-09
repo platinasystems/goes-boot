@@ -1,0 +1,11 @@
+*.orig
+*.rej
+*.so
+*.swp
+*.test
+*.zip
+*~
+*#*#
+/goes-boot
+/goes-boot-arm
+/*.patch
