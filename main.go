@@ -2,9 +2,7 @@
 // Use of this source code is governed by the GPL-2 license described in the
 // LICENSE file.
 
-// +build amd64 arm
-
-// This is a goes machine to be run by coreboot.
+// This is a goes machine to be run as an initial ramdisk payload.
 package main
 
 import (
@@ -14,7 +12,7 @@ import (
 	"github.com/platinasystems/redis"
 )
 
-const name = "coreboot"
+const name = "goes-boot"
 
 func main() {
 	var ecode int

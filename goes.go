@@ -148,7 +148,7 @@ var Goes = &goes.Goes{
 		"/init":  &slashinit.Command{},
 		"sleep":  sleep.Command{},
 		"source": &source.Command{},
-		"start":  &start.Command{},
+		"start":  &start.Command{Gettys: consoles},
 		"stop":   &stop.Command{},
 		"stty":   stty.Command{},
 		"sync":   sync.Command{},
