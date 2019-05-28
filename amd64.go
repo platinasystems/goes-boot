@@ -6,4 +6,7 @@
 
 package main
 
+import "github.com/platinasystems/goes/cmd/iocmd"
+
 var consoles = []string{"/dev/ttyS0"}
+var io = iocmd.Command{}

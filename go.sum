@@ -35,6 +35,10 @@ github.com/platinasystems/atsock v0.0.0-20181019220955-c4cc7ae24dbf h1:ChH/cr79N
 github.com/platinasystems/atsock v0.0.0-20181019220955-c4cc7ae24dbf/go.mod h1:1XAb4yaMVNH9PDa7Q4sZmDqHoHSrzUfnGImUuSMpx5U=
 github.com/platinasystems/atsock v1.1.0 h1:+h8ismKClv31tIEOTZQhBMdDJALQhF3vDKjK2Y8H7mU=
 github.com/platinasystems/atsock v1.1.0/go.mod h1:1XAb4yaMVNH9PDa7Q4sZmDqHoHSrzUfnGImUuSMpx5U=
+github.com/platinasystems/buildid v1.0.0 h1:kSdHB8xzYfidwwK2ZjZ1DNMZkaFpy4ffrQwsRyWFWdE=
+github.com/platinasystems/buildid v1.0.0/go.mod h1:r7AszdHHCZVPcw3zr1UhLHUx9NxlFcUlX1D9DwkDM1c=
+github.com/platinasystems/buildinfo v1.1.0 h1:LFlyBxsfwYyP7bhGb0rCV63pEWIsjvAC+1AlHo7A6iQ=
+github.com/platinasystems/buildinfo v1.1.0/go.mod h1:VO8oKwJRCwPKxkqaLjkMxPHLAoe5i+9hmlFZ2x3RFik=
 github.com/platinasystems/dbg v1.1.0/go.mod h1:sWVDySjmyMRdh9RgbbJORw6A+xIBdAmoqOXBarhswZY=
 github.com/platinasystems/eeprom v1.0.0/go.mod h1:J5rWlxG4HFDqq5o1KE4n942Se7BwXDADl6H+r9OfX1I=
 github.com/platinasystems/elib v1.1.0/go.mod h1:XZy8etdf41RtMxmxEYArLL7T6QEJ5MPAIeHDqXtPCUU=
@@ -49,6 +53,8 @@ github.com/platinasystems/goes v1.6.1 h1:cT4GRHgd0whpUSebvUXxDWdRBiNE+YxphNLj0jc
 github.com/platinasystems/goes v1.6.1/go.mod h1:CY+zw8/U/HaxbGPSZWkVUFDfygr0ZLFw0tPHpw70Xd8=
 github.com/platinasystems/goes v1.9.0 h1:A0P3TvrwJHaDT2RRFSNtCgjQIL/ADnQgytXXVcC3K54=
 github.com/platinasystems/goes v1.9.0/go.mod h1:wF7zn73CZnz47BCZRczeW3ZhUbepc4RBT0sINoYYmDE=
+github.com/platinasystems/goes v1.10.1 h1:feIuTn5R950y3qhMuynl1HcBnfCrkSRoKbquJ/C4Wuw=
+github.com/platinasystems/goes v1.10.1/go.mod h1:dJGtupCfWmlaqHvJyeHfGUj5NHf1UFy/IBb1w+UN9/0=
 github.com/platinasystems/gpio v0.0.0-20181120172958-aa9a44e83566/go.mod h1:UsR1pB6U/S7Ql6RDrF/S6rMJqWOiZu3H2mKQeEe4v7U=
 github.com/platinasystems/i2c v1.1.0/go.mod h1:Yj5hRxt+HXbW1rXv9aTtxUNZsegDjeWerUPY5BIjDVM=
 github.com/platinasystems/i2c v1.2.0/go.mod h1:Yj5hRxt+HXbW1rXv9aTtxUNZsegDjeWerUPY5BIjDVM=

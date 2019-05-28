@@ -9,6 +9,7 @@ import (
 	"github.com/platinasystems/goes/cmd"
 	"github.com/platinasystems/goes/cmd/bang"
 	"github.com/platinasystems/goes/cmd/buildid"
+	"github.com/platinasystems/goes/cmd/buildinfo"
 	"github.com/platinasystems/goes/cmd/cat"
 	"github.com/platinasystems/goes/cmd/cd"
 	"github.com/platinasystems/goes/cmd/chmod"
@@ -33,7 +34,6 @@ import (
 	"github.com/platinasystems/goes/cmd/ifcmd"
 	"github.com/platinasystems/goes/cmd/iminfo"
 	"github.com/platinasystems/goes/cmd/insmod"
-	"github.com/platinasystems/goes/cmd/iocmd"
 	"github.com/platinasystems/goes/cmd/ip"
 	"github.com/platinasystems/goes/cmd/kexec"
 	"github.com/platinasystems/goes/cmd/keys"
@@ -66,6 +66,7 @@ import (
 	"github.com/platinasystems/goes/cmd/thencmd"
 	"github.com/platinasystems/goes/cmd/truecmd"
 	"github.com/platinasystems/goes/cmd/umount"
+	"github.com/platinasystems/goes/cmd/version"
 	"github.com/platinasystems/goes/cmd/wget"
 	"github.com/platinasystems/goes/lang"
 )
@@ -107,7 +108,7 @@ var Goes = &goes.Goes{
 		"grubd":  &grubd.Command{},
 		"if":     &ifcmd.Command{},
 		"insmod": insmod.Command{},
-		"io":     iocmd.Command{},
+		"io":     io,
 		"ip":     ip.Goes,
 		"kexec":  kexec.Command{},
 		"keys":   keys.Command{},
@@ -137,11 +138,12 @@ var Goes = &goes.Goes{
 				lang.EnUS: "print stuff",
 			},
 			ByName: map[string]cmd.Cmd{
-				"buildid": buildid.Command{},
-				"cmdline": cmdline.Command{},
-				"iminfo":  iminfo.Command{},
-				"machine": Machine,
-				"version": &Version,
+				"buildid":   buildid.Command{},
+				"buildinfo": buildinfo.Command{},
+				"cmdline":   cmdline.Command{},
+				"iminfo":    iminfo.Command{},
+				"machine":   Machine,
+				"version":   version.Command{},
 			},
 		},
 
