@@ -6,4 +6,10 @@
 
 package main
 
-const consoles = []string{"/dev/ttymxc0"}
+import (
+	"github.com/platinasystems/goes/cmd/start"
+)
+
+const consoles = []start.TtyCon{
+	{Tty: "/dev/ttymxc0", Baud: 115200},
+}

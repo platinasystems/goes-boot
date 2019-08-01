@@ -6,4 +6,11 @@
 
 package main
 
-var consoles = []string{"/dev/ttyS0"}
+import (
+	"github.com/platinasystems/goes/cmd/start"
+)
+
+var consoles = []start.TtyCon{
+	{Tty: "/dev/ttyS0", Baud: 115200},
+	{Tty: "/dev/ttyS1", Baud: 57600},
+}
