@@ -6,7 +6,11 @@
 
 package main
 
-import "github.com/platinasystems/goes/cmd/iocmd"
+import (
+	"github.com/platinasystems/goes/cmd/start"
+)
 
-var consoles = []string{"/dev/ttyS0"}
-var io = iocmd.Command{}
+var consoles = []start.TtyCon{
+	{Tty: "/dev/ttyS0", Baud: 115200},
+	{Tty: "/dev/ttyS1", Baud: 57600},
+}
