@@ -5,6 +5,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/platinasystems/goes"
 	"github.com/platinasystems/goes/cmd"
 	"github.com/platinasystems/goes/cmd/bang"
@@ -68,10 +70,12 @@ import (
 	"github.com/platinasystems/goes/cmd/umount"
 	"github.com/platinasystems/goes/cmd/wget"
 	"github.com/platinasystems/goes/lang"
+
+	"github.com/platinasystems/ioport"
 )
 
 var Goes = &goes.Goes{
-	NAME: "goes-" + name,
+	NAME: name,
 	APROPOS: lang.Alt{
 		lang.EnUS: "the coreboot goes machine",
 	},
@@ -145,7 +149,7 @@ var Goes = &goes.Goes{
 			},
 		},
 
-		"/init":  &slashinit.Command{},
+		"/init":  &slashinit.Command{Hook: disableBootdog},
 		"sleep":  sleep.Command{},
 		"source": &source.Command{},
 		"start":  &start.Command{Gettys: consoles},
@@ -158,4 +162,17 @@ var Goes = &goes.Goes{
 		"umount": umount.Command{},
 		"wget":   wget.Command{},
 	},
+}
+
+func disableBootdog() (err error) {
+	b, err := ioport.Inb(0x604)
+	if err != nil {
+		return fmt.Errorf("Error in Inb(0x604): %s", err)
+	}
+	b = b & 0xfd
+	err = ioport.Outb(0x604, b)
+	if err != nil {
+		return fmt.Errorf("Error in Outb(0x604, %x): %s", b, err)
+	}
+	return
 }
