@@ -28,25 +28,36 @@ func copyFile(src, dst string, perm os.FileMode) (err error) {
 	return nil
 }
 
-func main() {
-	args := os.Args
-	fmt.Printf("in goes-recovery: args %v\n", args)
-	if filepath.Base(args[0]) == "goes-recovery" {
-		args[0] = "goes-boot"
-	}
+const name = "goes-recovery"
 
-	err := syscall.Mount("none", "/dev", "devtmpfs", 0, "")
+func setupGoesBoot() (err error) {
+	err = syscall.Mount("none", "/dev", "devtmpfs", 0, "")
 	if err != nil {
 		fmt.Printf("syscall.Mount(/dev) failed: %s\n", err)
-		os.Exit(1)
+		return
 	}
+
+	defer func() {
+		err = syscall.Unmount("/dev", 0)
+		if err != nil {
+			fmt.Printf("syscall.Unmount(/dev) failed: %s\n", err)
+		}
+	}()
 
 	err = syscall.Mount("/dev/sda1", "/boot", "ext4", syscall.MS_RDONLY,
 		"")
 	if err != nil {
 		fmt.Printf("syscall.Mount(/boot) failed: %s\n", err)
-		os.Exit(1)
+		return
 	}
+
+	defer func() {
+		err = syscall.Unmount("/boot", 0)
+		if err != nil {
+			fmt.Printf("syscall.Unmount(/boot) failed: %s\n", err)
+			return
+		}
+	}()
 
 	for _, c := range []struct {
 		src  string
@@ -64,23 +75,32 @@ func main() {
 		err = copyFile(c.src, c.dst, c.perm)
 		if err != nil {
 			fmt.Printf("Error in copyFile: %s\n", err)
-			os.Exit(1)
+			return
 		}
 	}
+	return nil
+}
 
-	err = syscall.Unmount("/boot", 0)
-	if err != nil {
-		fmt.Printf("syscall.Unmount(/boot) failed: %s\n", err)
-		os.Exit(1)
+func main() {
+	args := os.Args
+	fmt.Printf("in goes-recovery: args %v\n", args)
+	if args[0] == "/init" {
+		err := setupGoesBoot()
+		if err == nil {
+			fmt.Printf("leaving goes-recovery: args %v\n", args)
+			err = syscall.Exec("/sbin/goes-boot", args, os.Environ())
+			fmt.Printf("syscall.Exec failed: %s\n", err)
+		}
+	}
+	fmt.Printf("Invoking goes - args: %v\n", os.Args)
+
+	if filepath.Base(args[0]) == "goes-recovery" {
+		args[0] = "goes-boot"
 	}
 
-	err = syscall.Unmount("/dev", 0)
-	if err != nil {
-		fmt.Printf("syscall.Unmount(/dev) failed: %s\n", err)
-		os.Exit(1)
+	if err := Goes.Main(os.Args...); err != nil {
+		fmt.Fprintln(os.Stderr, err)
 	}
+	os.Exit(1) // Will panic and reboot
 
-	fmt.Printf("leaving goes-recovery: args %v\n", args)
-	err = syscall.Exec("/sbin/goes-boot", args, os.Environ())
-	fmt.Printf("syscall.Exec failed: %s\n", err)
 }
