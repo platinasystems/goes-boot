@@ -5,6 +5,7 @@ github.com/d2g/dhcp4 v0.0.0-20170904100407-a1d1b6c41b1c h1:Xo2rK1pzOm0jO6abTPIQw
 github.com/d2g/dhcp4 v0.0.0-20170904100407-a1d1b6c41b1c/go.mod h1:Ct2BUK8SB0YC1SMSibvLzxjeJLnrYEVLULFNiHY9YfQ=
 github.com/d2g/dhcp4client v0.0.0-20180622102533-b7a004ff1a09 h1:NKi6yc17MdjvVTKbAr2PzspCnuw+8hyBB7vVJyl4J9k=
 github.com/d2g/dhcp4client v0.0.0-20180622102533-b7a004ff1a09/go.mod h1:j0hNfjhrt2SxUOw55nL0ATM/z4Yt3t2Kd1mW34z5W5s=
+github.com/djherbis/times v1.2.0 h1:xANXjsC/iBqbO00vkWlYwPWgBgEVU6m6AFYg0Pic+Mc=
 github.com/djherbis/times v1.2.0/go.mod h1:CGMZlo255K5r4Yw0b9RRfFQpM2y7uOmxg4jm9HsaVf8=
 github.com/flynn/go-shlex v0.0.0-20150515145356-3f9db97f8568/go.mod h1:xEzjJPgXI435gkrCt3MPfRiAkVrwSbHsst4LCFVfpJc=
 github.com/garyburd/redigo v1.6.0/go.mod h1:NR3MbYisc3/PwhQ00EMzDiPmrwpPxAn5GI05/YaO1SY=
@@ -28,11 +29,9 @@ github.com/platinasystems/fdt v0.0.0-20181004054827-3416b99a7d82/go.mod h1:WM0Ss
 github.com/platinasystems/flags v1.0.1 h1:YhuXr+LuV7l9fErXWPS0O1PynaRtDoo0vV/WoXtp4fU=
 github.com/platinasystems/flags v1.0.1/go.mod h1:3t8RybiABfJKBne5suYmfXoKOAK6bnMqr++fqaQ2V9M=
 github.com/platinasystems/go-redis-server v0.0.0-20181030193423-fcb8fa742b73/go.mod h1:/GXF5FQty+9BTtfCsfFuD4/pHf/b2cN3f3Ic0nLagQw=
-github.com/platinasystems/goes v1.12.0 h1:sOP4fh2WwyvTIVBzwqW7h7hiARzdGBJg/4wHCX24H3g=
-github.com/platinasystems/goes v1.12.0/go.mod h1:W/ngo5tyRQ9L7lgXDzivhhlHyxBGbJQneGUkN3LjX+E=
-github.com/platinasystems/goes v1.12.1 h1:bXeLMH8dPrfujvD+jA579p3A6NXoUYvZs3IYCnjJO0w=
-github.com/platinasystems/goes v1.12.1/go.mod h1:W/ngo5tyRQ9L7lgXDzivhhlHyxBGbJQneGUkN3LjX+E=
-github.com/platinasystems/gpio v1.2.0/go.mod h1:UsR1pB6U/S7Ql6RDrF/S6rMJqWOiZu3H2mKQeEe4v7U=
+github.com/platinasystems/goes v1.12.3 h1:mkXPeR16vNEoe6UdApjD/sEYY90EWM8X7xFr5g09hCM=
+github.com/platinasystems/goes v1.12.3/go.mod h1:4xArkgoih/+TqHG78vEshKzuxE5BRi9jMavUC7e8MFc=
+github.com/platinasystems/gpio v1.3.0/go.mod h1:UsR1pB6U/S7Ql6RDrF/S6rMJqWOiZu3H2mKQeEe4v7U=
 github.com/platinasystems/i2c v1.2.0/go.mod h1:Yj5hRxt+HXbW1rXv9aTtxUNZsegDjeWerUPY5BIjDVM=
 github.com/platinasystems/ioport v0.0.1 h1:YIrQV/oix3ENpzxi3Atw0UxW2JV21OhPR2VbJ6LUC3M=
 github.com/platinasystems/ioport v0.0.1/go.mod h1:hfzDUTcaOvxYi0bwMY50WVOenxuO9GQu1k55K9nkXTg=
@@ -68,4 +67,5 @@ golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5h
 golang.org/x/sys v0.0.0-20190412213103-97732733099d h1:+R4KGOnez64A81RvjARKc4UT5/tI9ujCIVX+P5KiHuI=
 golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
