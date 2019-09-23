@@ -8,6 +8,7 @@ import (
 	"fmt"
 
 	"github.com/platinasystems/goes"
+	"github.com/platinasystems/goes-recovery/cmd/recoveryd"
 	"github.com/platinasystems/goes/cmd"
 	"github.com/platinasystems/goes/cmd/cli"
 	"github.com/platinasystems/goes/cmd/daemons"
@@ -39,18 +40,20 @@ var Goes = &goes.Goes{
 		"goes-daemons": &daemons.Server{
 			Init: [][]string{
 				[]string{"dhcpcd"},
+				[]string{"recoveryd"},
 			},
 		},
-		"ip":     ip.Goes,
-		"kexec":  kexec.Command{},
-		"mount":  mount.Command{},
-		"reboot": &reboot.Command{},
-		"/init":  &slashinit.Command{Hook: disableBootdog},
-		"source": &source.Command{},
-		"start":  &start.Command{Gettys: consoles},
-		"stop":   &stop.Command{},
-		"umount": umount.Command{},
-		"wget":   wget.Command{},
+		"ip":        ip.Goes,
+		"kexec":     kexec.Command{},
+		"mount":     mount.Command{},
+		"reboot":    &reboot.Command{},
+		"recoveryd": &recoveryd.Command{},
+		"/init":     &slashinit.Command{Hook: disableBootdog},
+		"source":    &source.Command{},
+		"start":     &start.Command{Gettys: consoles},
+		"stop":      &stop.Command{},
+		"umount":    umount.Command{},
+		"wget":      wget.Command{},
 	},
 }
 
