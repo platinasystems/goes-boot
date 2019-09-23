@@ -94,8 +94,8 @@ func main() {
 	}
 	fmt.Printf("Invoking goes - args: %v\n", os.Args)
 
-	if filepath.Base(args[0]) == "goes-recovery" {
-		args[0] = "goes-boot"
+	if filepath.Base(args[0]) == name {
+		args[0] = name
 	}
 
 	if err := Goes.Main(os.Args...); err != nil {
