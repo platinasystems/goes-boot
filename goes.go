@@ -111,7 +111,7 @@ var Goes = &goes.Goes{
 		"insmod": insmod.Command{},
 		"io":     iocmd.Command{},
 		"ip":     ip.Goes,
-		"kexec":  kexec.Command{},
+		"kexec":  &kexec.Command{},
 		"keys":   keys.Command{},
 		"kill":   kill.Command{},
 		"ln":     ln.Command{},
