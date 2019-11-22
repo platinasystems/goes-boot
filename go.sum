@@ -29,8 +29,8 @@ github.com/platinasystems/fdt v0.0.0-20181004054827-3416b99a7d82/go.mod h1:WM0Ss
 github.com/platinasystems/flags v1.0.1 h1:YhuXr+LuV7l9fErXWPS0O1PynaRtDoo0vV/WoXtp4fU=
 github.com/platinasystems/flags v1.0.1/go.mod h1:3t8RybiABfJKBne5suYmfXoKOAK6bnMqr++fqaQ2V9M=
 github.com/platinasystems/go-redis-server v0.0.0-20181030193423-fcb8fa742b73/go.mod h1:/GXF5FQty+9BTtfCsfFuD4/pHf/b2cN3f3Ic0nLagQw=
-github.com/platinasystems/goes v1.12.3 h1:mkXPeR16vNEoe6UdApjD/sEYY90EWM8X7xFr5g09hCM=
-github.com/platinasystems/goes v1.12.3/go.mod h1:4xArkgoih/+TqHG78vEshKzuxE5BRi9jMavUC7e8MFc=
+github.com/platinasystems/goes v1.13.4 h1:EN8yYapm6dG5IUqnzi/tz0yfxNhnQWxiMzscAutAIgI=
+github.com/platinasystems/goes v1.13.4/go.mod h1:bwuvLYurWf4eM2gVFdbq9RUke6QU17ZHIYNen4djqXY=
 github.com/platinasystems/gpio v1.3.0/go.mod h1:UsR1pB6U/S7Ql6RDrF/S6rMJqWOiZu3H2mKQeEe4v7U=
 github.com/platinasystems/i2c v1.2.0/go.mod h1:Yj5hRxt+HXbW1rXv9aTtxUNZsegDjeWerUPY5BIjDVM=
 github.com/platinasystems/ioport v0.0.1 h1:YIrQV/oix3ENpzxi3Atw0UxW2JV21OhPR2VbJ6LUC3M=
@@ -53,8 +53,8 @@ github.com/platinasystems/term v0.0.0-20190801203457-969603cfd238/go.mod h1:8awC
 github.com/platinasystems/tftp v1.0.0 h1:wUv+nFUwntLddYGa3Y5Zr3TUQ4rtQXGebG0ZOutVyIw=
 github.com/platinasystems/tftp v1.0.0/go.mod h1:RUhAd8ADNPAQmoiSbjo4aDFAOBjz7kC1FkDAmuEd9J0=
 github.com/platinasystems/ubi v0.0.2/go.mod h1:owxkur4yGan4QJryDtjAWr4fj/BDCXQ/x9KqID9T1y0=
-github.com/platinasystems/url v1.0.0 h1:T2GuEIydvkZCpbU4DlTVyRdYoM5gn9MQNRGOObDg574=
-github.com/platinasystems/url v1.0.0/go.mod h1:tjHiLHUR+Jasu091bzwk/SAHkgEuO8ohYmi4XTszV2Y=
+github.com/platinasystems/url v1.1.0 h1:WApbRs4iwxmDM5tTH4KQcyssRqPV99iqW4dLoKofgrc=
+github.com/platinasystems/url v1.1.0/go.mod h1:tjHiLHUR+Jasu091bzwk/SAHkgEuO8ohYmi4XTszV2Y=
 github.com/ramr/go-reaper v0.0.0-20170814234526-35f6a64e44ff h1:kXSTJRId8WwwqEfN0iQtzQu+jof2jTguzP2y12ULXvc=
 github.com/ramr/go-reaper v0.0.0-20170814234526-35f6a64e44ff/go.mod h1:DFg2AhfQCvkJwRKUfsycOSSZELGBA9gt46ne3SOecJM=
 github.com/satori/go.uuid v1.2.0 h1:0uYX9dsZ2yD7q2RtLRtPSdGDWzjeM3TbMJP9utgA0ww=

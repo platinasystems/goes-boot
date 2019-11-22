@@ -44,7 +44,7 @@ var Goes = &goes.Goes{
 			},
 		},
 		"ip":        ip.Goes,
-		"kexec":     kexec.Command{},
+		"kexec":     &kexec.Command{},
 		"mount":     mount.Command{},
 		"reboot":    &reboot.Command{},
 		"recoveryd": &recoveryd.Command{},
