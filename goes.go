@@ -10,6 +10,7 @@ import (
 	"github.com/platinasystems/goes"
 	"github.com/platinasystems/goes-recovery/cmd/recoveryd"
 	"github.com/platinasystems/goes/cmd"
+	"github.com/platinasystems/goes/cmd/bang"
 	"github.com/platinasystems/goes/cmd/cli"
 	"github.com/platinasystems/goes/cmd/daemons"
 	"github.com/platinasystems/goes/cmd/dhcpcd"
@@ -34,6 +35,7 @@ var Goes = &goes.Goes{
 		lang.EnUS: "the coreboot goes machine",
 	},
 	ByName: map[string]cmd.Cmd{
+		"!":       bang.Command{},
 		"cli":     &cli.Command{},
 		"daemons": daemons.Admin,
 		"dhcpcd":  &dhcpcd.Command{},
