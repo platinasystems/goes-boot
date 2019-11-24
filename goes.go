@@ -12,10 +12,12 @@ import (
 	"github.com/platinasystems/goes/cmd"
 	"github.com/platinasystems/goes/cmd/bang"
 	"github.com/platinasystems/goes/cmd/cli"
+	"github.com/platinasystems/goes/cmd/cp"
 	"github.com/platinasystems/goes/cmd/daemons"
 	"github.com/platinasystems/goes/cmd/dhcpcd"
 	"github.com/platinasystems/goes/cmd/ip"
 	"github.com/platinasystems/goes/cmd/kexec"
+	"github.com/platinasystems/goes/cmd/ls"
 	"github.com/platinasystems/goes/cmd/mount"
 	"github.com/platinasystems/goes/cmd/reboot"
 	"github.com/platinasystems/goes/cmd/slashinit"
@@ -37,6 +39,7 @@ var Goes = &goes.Goes{
 	ByName: map[string]cmd.Cmd{
 		"!":       bang.Command{},
 		"cli":     &cli.Command{},
+		"cp":      &cp.Command{},
 		"daemons": daemons.Admin,
 		"dhcpcd":  &dhcpcd.Command{},
 		"goes-daemons": &daemons.Server{
@@ -47,6 +50,7 @@ var Goes = &goes.Goes{
 		},
 		"ip":        ip.Goes,
 		"kexec":     &kexec.Command{},
+		"ls":        ls.Command{},
 		"mount":     mount.Command{},
 		"reboot":    &reboot.Command{},
 		"recoveryd": &recoveryd.Command{},
