@@ -30,7 +30,7 @@ func copyFile(src, dst string, perm os.FileMode) (err error) {
 
 const name = "goes-recovery"
 
-func setupGoesBoot() (err error) {
+func setupGoesBoot(dev string) (err error) {
 	err = syscall.Mount("none", "/dev", "devtmpfs", 0, "")
 	if err != nil {
 		fmt.Printf("syscall.Mount(/dev) failed: %s\n", err)
@@ -44,7 +44,7 @@ func setupGoesBoot() (err error) {
 		}
 	}()
 
-	err = syscall.Mount("/dev/sda1", "/boot", "ext4", syscall.MS_RDONLY,
+	err = syscall.Mount(dev, "/boot", "ext4", syscall.MS_RDONLY,
 		"")
 	if err != nil {
 		fmt.Printf("syscall.Mount(/boot) failed: %s\n", err)
@@ -81,19 +81,27 @@ func setupGoesBoot() (err error) {
 	return nil
 }
 
-func main() {
-	args := os.Args
-	fmt.Printf("in goes-recovery: args %v\n", args)
-	if args[0] == "/init" {
-		err := setupGoesBoot()
-		if err == nil {
-			fmt.Printf("leaving goes-recovery: args %v\n", args)
-			err = syscall.Exec("/sbin/goes-boot", args, os.Environ())
-			fmt.Printf("syscall.Exec failed: %s\n", err)
-		}
+func execGoesBoot(dev string) (err error) {
+	err = setupGoesBoot(dev)
+	if err != nil {
+		return
 	}
+	fmt.Printf("trying goes-recovery (%s): args %v\n", dev, os.Args)
+	err = syscall.Exec("/sbin/goes-boot", os.Args, os.Environ())
+	fmt.Printf("syscall.Exec (%s) failed: %s\n", dev, err)
+	return
+}
+
+func main() {
+	fmt.Printf("in goes-recovery: args %v\n", os.Args)
+	if os.Args[0] == "/init" {
+		_ = execGoesBoot("/dev/sdb1")
+		_ = execGoesBoot("/dev/sda1")
+	}
+
 	fmt.Printf("Invoking goes - args: %v\n", os.Args)
 
+	args := os.Args
 	if filepath.Base(args[0]) == name {
 		args[0] = name
 	}
