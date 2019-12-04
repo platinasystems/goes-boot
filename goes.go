@@ -43,6 +43,7 @@ import (
 	"github.com/platinasystems/goes/cmd/log"
 	"github.com/platinasystems/goes/cmd/ls"
 	"github.com/platinasystems/goes/cmd/lsmod"
+	"github.com/platinasystems/goes/cmd/lsof"
 	"github.com/platinasystems/goes/cmd/mkdir"
 	"github.com/platinasystems/goes/cmd/mknod"
 	"github.com/platinasystems/goes/cmd/mount"
@@ -118,6 +119,7 @@ var Goes = &goes.Goes{
 		"log":    log.Command{},
 		"ls":     ls.Command{},
 		"lsmod":  lsmod.Command{},
+		"lsof":   lsof.Command{},
 		"mkdir":  mkdir.Command{},
 		"mknod":  mknod.Command{},
 		"mount":  mount.Command{},
