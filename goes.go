@@ -73,7 +73,7 @@ import (
 )
 
 var Goes = &goes.Goes{
-	NAME: "goes-" + name,
+	NAME: name,
 	APROPOS: lang.Alt{
 		lang.EnUS: "the coreboot goes machine",
 	},
