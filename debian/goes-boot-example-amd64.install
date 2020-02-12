@@ -1,0 +1,2 @@
+coreboot-example-amd64.rom usr/share/goes-boot
+goes-boot boot/goes-boot

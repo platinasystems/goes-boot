@@ -1,0 +1,6 @@
+The Debian Package goes-boot
+----------------------------
+
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Thu, 19 Mar 2020 17:58:00 -0600
+	First pass at packaging goes-boot into a Debian package.

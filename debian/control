@@ -1,0 +1,26 @@
+Source: goes-boot
+Section: admin
+Priority: optional
+Maintainer: Kevin Paul Herbert <kph@platinasystems.com>
+Build-Depends: debhelper (>=10), goes-build
+Standards-Version: 3.9.8
+Homepage: https://github.com/platinasystems/goes-boot
+Vcs-Browser: https://github.com/platinasystems/goes-boot
+Vcs-Git: https://github.com/platinasystems/goes-boot.git
+
+Package: goes-boot-example-amd64
+Architecture: any
+Depends: ${misc:Depends}
+Description: goes-boot package for qemu-system-x86_64
+ Test package which can be used with qemu-system-x86_64 to
+ develop goes-boot without using actual hardware.
+
+Package: goes-boot-mk1
+Architecture: any
+Depends: ${misc:Depends},
+ flashrom-platina,
+ dmidecode
+Description: goes-boot package for the Platina MK1
+ Boot software for the Platina MK1 based on goes-boot.
+
+
