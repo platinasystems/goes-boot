@@ -8,4 +8,6 @@
 *#*#
 /goes-boot
 /goes-boot-arm
+/goes-bootrom
+/goes-bootrom-arm
 /*.patch

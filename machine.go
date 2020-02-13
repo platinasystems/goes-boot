@@ -1,3 +1,7 @@
+// Copyright © 2020 Platina Systems, Inc. All rights reserved.
+// Use of this source code is governed by the GPL-2 license described in the
+// LICENSE file.
+
 package main
 
 import (
@@ -7,8 +11,6 @@ import (
 )
 
 type machine string
-
-const Machine machine = "goes-boot"
 
 func (machine) String() string { return "machine" }
 func (machine) Usage() string  { return "show machine" }

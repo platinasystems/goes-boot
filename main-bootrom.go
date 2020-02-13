@@ -95,13 +95,10 @@ func execGoesBoot(dev string) (err error) {
 }
 
 func main() {
-	fmt.Printf("in goes-bootrom: args %v\n", os.Args)
 	if os.Args[0] == "/init" {
 		_ = execGoesBoot("/dev/sdb1")
 		_ = execGoesBoot("/dev/sda1")
 	}
-
-	fmt.Printf("Invoking goes - args: %v\n", os.Args)
 
 	args := os.Args
 	if filepath.Base(args[0]) == name {
@@ -110,7 +107,6 @@ func main() {
 
 	if err := Goes.Main(os.Args...); err != nil {
 		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
-	os.Exit(1) // Will panic and reboot
-
 }

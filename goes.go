@@ -1,4 +1,4 @@
-// Copyright © 2015-2016 Platina Systems, Inc. All rights reserved.
+// Copyright © 2015-2020 Platina Systems, Inc. All rights reserved.
 // Use of this source code is governed by the GPL-2 license described in the
 // LICENSE file.
 
@@ -76,10 +76,8 @@ import (
 )
 
 var Goes = &goes.Goes{
-	NAME: name,
-	APROPOS: lang.Alt{
-		lang.EnUS: "the coreboot goes machine",
-	},
+	NAME:    name,
+	APROPOS: Apropos,
 	ByName: map[string]cmd.Cmd{
 		"!":        bang.Command{},
 		"cli":      &cli.Command{},
@@ -152,7 +150,7 @@ var Goes = &goes.Goes{
 			},
 		},
 
-		"/init":  &slashinit.Command{},
+		"/init":  &slashinit.Command{Hook: disableBootdog},
 		"sleep":  sleep.Command{},
 		"source": &source.Command{},
 		"start":  &start.Command{Gettys: consoles},
