@@ -2,6 +2,8 @@
 // Use of this source code is governed by the GPL-2 license described in the
 // LICENSE file.
 
+// +build bootrom
+
 // First stage bootstrap. Looks for second stage or recovers the system
 package main
 
@@ -28,7 +30,7 @@ func copyFile(src, dst string, perm os.FileMode) (err error) {
 	return nil
 }
 
-const name = "goes-recovery"
+const name = "goes-bootrom"
 
 func setupGoesBoot(dev string) (err error) {
 	err = syscall.Mount("none", "/dev", "devtmpfs", 0, "")
@@ -86,14 +88,14 @@ func execGoesBoot(dev string) (err error) {
 	if err != nil {
 		return
 	}
-	fmt.Printf("trying goes-recovery (%s): args %v\n", dev, os.Args)
+	fmt.Printf("trying goes-bootrom (%s): args %v\n", dev, os.Args)
 	err = syscall.Exec("/sbin/goes-boot", os.Args, os.Environ())
 	fmt.Printf("syscall.Exec (%s) failed: %s\n", dev, err)
 	return
 }
 
 func main() {
-	fmt.Printf("in goes-recovery: args %v\n", os.Args)
+	fmt.Printf("in goes-bootrom: args %v\n", os.Args)
 	if os.Args[0] == "/init" {
 		_ = execGoesBoot("/dev/sdb1")
 		_ = execGoesBoot("/dev/sda1")
