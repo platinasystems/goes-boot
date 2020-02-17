@@ -1,0 +1,11 @@
+*.orig
+*.rej
+*.so
+*.swp
+*.test
+*.zip
+*~
+*#*#
+/goes-recovery
+/goes-recovery-arm
+/*.patch
