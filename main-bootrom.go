@@ -66,13 +66,14 @@ func setupGoesBoot(dev string) (err error) {
 		dst  string
 		perm os.FileMode
 	}{
-		{"/boot/boot/goes/goes-boot", "/sbin/goes-boot", 0755},
-		{"/boot/boot/goes/init", "/etc/goes/init", 0644},
-		{"/boot/boot/goes/start", "/etc/goes/start", 0644},
-		{"/boot/boot/goes/stop", "/etc/goes/stop", 0644},
-		{"/boot/boot/goes/authorized_keys",
+		{"/boot/boot/" + packageName + "/" + packageName,
+			"/sbin/goes-boot", 0755},
+		{"/boot/boot/" + packageName + "/init", "/etc/goes/init", 0644},
+		{"/boot/boot/" + packageName + "/start", "/etc/goes/start", 0644},
+		{"/boot/boot/" + packageName + "/stop", "/etc/goes/stop", 0644},
+		{"/boot/boot/" + packageName + "/authorized_keys",
 			"/etc/goes/sshd/authorized_keys", 0600},
-		{"/boot/boot/goes/resolv.conf", "/etc/resolv.conf", 0644},
+		{"/boot/boot/" + packageName + "/resolv.conf", "/etc/resolv.conf", 0644},
 	} {
 		err = copyFile(c.src, c.dst, c.perm)
 		if err != nil {

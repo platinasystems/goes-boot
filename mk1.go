@@ -12,6 +12,8 @@ import (
 	"github.com/platinasystems/ioport"
 )
 
+const packageName = "goes-boot-platina-mk1"
+
 func disableBootdog() (err error) {
 	b, err := ioport.Inb(0x604)
 	if err != nil {

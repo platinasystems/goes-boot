@@ -6,6 +6,8 @@
 
 package main
 
+const packageName = "goes-boot"
+
 func disableBootdog() (err error) {
 	return nil
 }
