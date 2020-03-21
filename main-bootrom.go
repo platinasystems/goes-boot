@@ -61,19 +61,25 @@ func setupGoesBoot(dev string) (err error) {
 		}
 	}()
 
+	path := "/boot/boot/" + packageName
+	if _, err := os.Stat(path + "/" + packageName); err != nil {
+		path = "/boot/" + packageName
+		if _, err := os.Stat(path + "/" + packageName); err != nil {
+			return nil
+		}
+	}
+
 	for _, c := range []struct {
 		src  string
 		dst  string
 		perm os.FileMode
 	}{
-		{"/boot/boot/" + packageName + "/" + packageName,
-			"/sbin/goes-boot", 0755},
-		{"/boot/boot/" + packageName + "/init", "/etc/goes/init", 0644},
-		{"/boot/boot/" + packageName + "/start", "/etc/goes/start", 0644},
-		{"/boot/boot/" + packageName + "/stop", "/etc/goes/stop", 0644},
-		{"/boot/boot/" + packageName + "/authorized_keys",
-			"/etc/goes/sshd/authorized_keys", 0600},
-		{"/boot/boot/" + packageName + "/resolv.conf", "/etc/resolv.conf", 0644},
+		{path + "/" + packageName, "/sbin/goes-boot", 0755},
+		{path + "/init", "/etc/goes/init", 0644},
+		{path + "/start", "/etc/goes/start", 0644},
+		{path + "/stop", "/etc/goes/stop", 0644},
+		{path + "/authorized_keys", "/etc/goes/sshd/authorized_keys", 0600},
+		{path + "/resolv.conf", "/etc/resolv.conf", 0644},
 	} {
 		err = copyFile(c.src, c.dst, c.perm)
 		if err != nil {
