@@ -31,8 +31,16 @@ import (
 	"github.com/platinasystems/goes/cmd/femtocom"
 	"github.com/platinasystems/goes/cmd/ficmd"
 	"github.com/platinasystems/goes/cmd/function"
+	"github.com/platinasystems/goes/cmd/grep"
 	"github.com/platinasystems/goes/cmd/grub"
 	"github.com/platinasystems/goes/cmd/grubd"
+	"github.com/platinasystems/goes/cmd/hdel"
+	"github.com/platinasystems/goes/cmd/hdelta"
+	"github.com/platinasystems/goes/cmd/hexists"
+	"github.com/platinasystems/goes/cmd/hget"
+	"github.com/platinasystems/goes/cmd/hgetall"
+	"github.com/platinasystems/goes/cmd/hkeys"
+	"github.com/platinasystems/goes/cmd/hset"
 	"github.com/platinasystems/goes/cmd/ifcmd"
 	"github.com/platinasystems/goes/cmd/iminfo"
 	"github.com/platinasystems/goes/cmd/insmod"
@@ -106,28 +114,36 @@ var Goes = &goes.Goes{
 				[]string{"grubd"},
 			},
 		},
-		"grub":   &grub.Command{},
-		"grubd":  &grubd.Command{},
-		"if":     &ifcmd.Command{},
-		"insmod": insmod.Command{},
-		"io":     iocmd.Command{},
-		"ip":     ip.Goes,
-		"kexec":  &kexec.Command{},
-		"keys":   keys.Command{},
-		"kill":   kill.Command{},
-		"ln":     ln.Command{},
-		"log":    log.Command{},
-		"ls":     ls.Command{},
-		"lsmod":  lsmod.Command{},
-		"lsof":   lsof.Command{},
-		"mkdir":  mkdir.Command{},
-		"mknod":  mknod.Command{},
-		"mount":  mount.Command{},
-		"mountd": mountd.Command(make(chan struct{})),
-		"ping":   ping.Command{},
-		"ps":     ps.Command{},
-		"pwd":    pwd.Command{},
-		"reboot": &reboot.Command{},
+		"grep":    grep.Command{},
+		"grub":    &grub.Command{},
+		"grubd":   &grubd.Command{},
+		"hdel":    hdel.Command{},
+		"hdelta":  &hdelta.Command{},
+		"hexists": hexists.Command{},
+		"hget":    hget.Command{},
+		"hgetall": hgetall.Command{},
+		"hkeys":   hkeys.Command{},
+		"hset":    hset.Command{},
+		"if":      &ifcmd.Command{},
+		"insmod":  insmod.Command{},
+		"io":      iocmd.Command{},
+		"ip":      ip.Goes,
+		"kexec":   &kexec.Command{},
+		"keys":    keys.Command{},
+		"kill":    kill.Command{},
+		"ln":      ln.Command{},
+		"log":     log.Command{},
+		"ls":      ls.Command{},
+		"lsmod":   lsmod.Command{},
+		"lsof":    lsof.Command{},
+		"mkdir":   mkdir.Command{},
+		"mknod":   mknod.Command{},
+		"mount":   mount.Command{},
+		"mountd":  mountd.Command(make(chan struct{})),
+		"ping":    ping.Command{},
+		"ps":      ps.Command{},
+		"pwd":     pwd.Command{},
+		"reboot":  &reboot.Command{},
 
 		"reload":  reload.Command{},
 		"restart": &restart.Command{},
