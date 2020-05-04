@@ -1,3 +1,13 @@
+goes-boot (2.0~alpha.1) stretch; urgency=medium
+
+  * Update coreboot to 4.11-23-g6e88d759fa
+
+  * Update linux to v4.18.20-259-gcfd4218b404b
+
+  * Update goes-boot to v1.3.0.alpha.0-29-g7a96cf8
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Mon, 04 May 2020 14:36:05 -0600
+
 goes-boot (2.0~alpha.0) stretch; urgency=medium
 
   * Initial Release.
