@@ -9,7 +9,7 @@ clean:
 	rm -f *.rom debian/debhelper-build-stamp debian/files debian/*.substvars *.vmlinuz *.xz goes-boot goes-boot-platina-mk1 goes-bootrom goes-bootrom-platina-mk1
 	rm -rf debian/.debhelper debian/goes-boot-mk1 debian/goes-boot-example-amd64
 
-binpkg-deb:
+bindeb-pkg:
 	debuild -i -I -Iworktrees --lintian-opts --profile debian
 
-.PHONY: goes-boot install binpkg-deb clean
+.PHONY: goes-boot install bindeb-pkg clean
