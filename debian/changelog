@@ -1,3 +1,10 @@
+goes-boot (2.0~alpha.2) stretch; urgency=medium
+
+  * main-bootrom: Look for goes-boot on sda6
+  * goes-boot: Update to goes v1.13.12
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Tue, 05 May 2020 14:58:44 -0600
+
 goes-boot (2.0~alpha.1) stretch; urgency=medium
 
   * Update coreboot to 4.11-23-g6e88d759fa
