@@ -105,6 +105,7 @@ func main() {
 	if os.Args[0] == "/init" {
 		_ = execGoesBoot("/dev/sdb1")
 		_ = execGoesBoot("/dev/sda1")
+		_ = execGoesBoot("/dev/sda6")
 	}
 
 	args := os.Args
