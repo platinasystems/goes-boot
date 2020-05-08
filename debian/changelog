@@ -1,9 +1,10 @@
 goes-boot (2.0~alpha.2) stretch; urgency=medium
 
+  * coreboot: Add support for I2C muxes and GPIOs in ACPI DSDT
   * main-bootrom: Look for goes-boot on sda6
   * goes-boot: Update to goes v1.13.12
 
- -- Kevin Paul Herbert <kph@platinasystems.com>  Tue, 05 May 2020 14:58:44 -0600
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Tue, 08 May 2020 16:42:44 -0600
 
 goes-boot (2.0~alpha.1) stretch; urgency=medium
 
