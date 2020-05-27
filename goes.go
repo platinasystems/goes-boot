@@ -59,7 +59,6 @@ import (
 	"github.com/platinasystems/goes/cmd/mount"
 	"github.com/platinasystems/goes/cmd/mountd"
 	"github.com/platinasystems/goes/cmd/ping"
-	"github.com/platinasystems/goes/cmd/platina/mk1/bootc"
 	"github.com/platinasystems/goes/cmd/ps"
 	"github.com/platinasystems/goes/cmd/pwd"
 	"github.com/platinasystems/goes/cmd/reboot"
@@ -89,7 +88,6 @@ var Goes = &goes.Goes{
 	ByName: map[string]cmd.Cmd{
 		"!":        bang.Command{},
 		"cli":      &cli.Command{},
-		"bootc":    &bootc.Command{},
 		"cat":      cat.Command{},
 		"cd":       &cd.Command{},
 		"chmod":    chmod.Command{},
