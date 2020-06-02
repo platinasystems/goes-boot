@@ -1,10 +1,26 @@
+goes-boot (2.0~alpha.4) stretch; urgency=medium
+
+  * coreboot: Fix UART_MUX_SEL naming error
+  * coreboot: Fix spurious 'unused static devices' warning at boot
+  * debian: Remove use of flashrom-platina; use flasrom 1.1 or later
+  * debian: Add flex and bison to build requirements
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Fri, 05 Jun 2020 13:37:06 -0600
+
+goes-boot (2.0~alpha.3) stretch; urgency=medium
+
+  * coreboot: Remove GPIO hogging
+  * goes-boot: Update to goes v1.14.0, fix booting on systems without swap
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Thu, 28 May 2020 16:15:37 -0600
+
 goes-boot (2.0~alpha.2) stretch; urgency=medium
 
   * coreboot: Add support for I2C muxes and GPIOs in ACPI DSDT
   * main-bootrom: Look for goes-boot on sda6
   * goes-boot: Update to goes v1.13.12
 
- -- Kevin Paul Herbert <kph@platinasystems.com>  Tue, 08 May 2020 16:42:44 -0600
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Fri, 08 May 2020 16:42:44 -0600
 
 goes-boot (2.0~alpha.1) stretch; urgency=medium
 
