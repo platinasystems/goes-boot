@@ -1,3 +1,9 @@
+goes-boot (2.0~rc.1) stretch; urgency=medium
+
+  * goes-boot: Require goes-build 2.0~rc.1
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Fri, 19 Jun 2020 16:29:01 -0700
+
 goes-boot (2.0~alpha.4) stretch; urgency=medium
 
   * coreboot: Fix UART_MUX_SEL naming error
