@@ -2,7 +2,8 @@ Source: goes-boot
 Section: admin
 Priority: optional
 Maintainer: Kevin Paul Herbert <kph@platinasystems.com>
-Build-Depends: debhelper (>=10), goes-build, flex, bison, libelf-dev
+Build-Depends: debhelper (>=10), flex, bison, libelf-dev,
+	       goes-build (>=2.0~rc.1)
 Standards-Version: 3.9.8
 Homepage: https://github.com/platinasystems/goes-boot
 Vcs-Browser: https://github.com/platinasystems/goes-boot
