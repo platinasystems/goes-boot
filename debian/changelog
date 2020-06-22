@@ -1,3 +1,10 @@
+goes-boot (2.0.0) stretch; urgency=medium
+
+  * goes-boot: Add missing flash layout file
+  * debian: Add libelf-dev to build requirements
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Mon, 22 Jun 2020 16:56:29 -0600
+
 goes-boot (2.0~rc.1) stretch; urgency=medium
 
   * goes-boot: Require goes-build 2.0~rc.1
