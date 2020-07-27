@@ -7,6 +7,7 @@
 package main
 
 const packageName = "goes-boot"
+const recoveryUrl = "https://platina.kph.wtf/goes-boot.cpio.xz"
 
 func disableBootdog() (err error) {
 	return nil

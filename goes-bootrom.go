@@ -85,7 +85,7 @@ var Goes = &goes.Goes{
 		//"ping":      ping.Command{},
 		"ps":        ps.Command{},
 		"reboot":    &reboot.Command{},
-		"recoveryd": &recoveryd.Command{},
+		"recoveryd": &recoveryd.Command{Url: recoveryUrl},
 		"/init":     &slashinit.Command{Hook: disableBootdog},
 		"source":    &source.Command{},
 		"start":     &start.Command{Gettys: consoles},
