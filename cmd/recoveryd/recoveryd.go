@@ -115,7 +115,7 @@ func (c *Command) tryArchive() (err error) {
 	if err != nil {
 		return fmt.Errorf("Unable to MkdirAll %s: %w", target, err)
 	}
-	err = syscall.Mount("", target, "tmpfs", 0, "")
+	err = syscall.Mount("tmpfs", target, "tmpfs", 0, "")
 	if err != nil {
 		return fmt.Errorf("Unable to create tmpfs: %w", err)
 	}
