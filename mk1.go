@@ -13,7 +13,7 @@ import (
 )
 
 const packageName = "goes-boot-platina-mk1"
-const recoveryUrl = "https://platina.kph.wtf/goes-boot-mk1.cpio.xz"
+const recoveryUrl = "https://platina.io/goes/goes-boot-platina-mk1.cpio.xz"
 
 func disableBootdog() (err error) {
 	b, err := ioport.Inb(0x604)
