@@ -95,7 +95,7 @@ func execGoesBoot(dev string) (err error) {
 	if err != nil {
 		return
 	}
-	fmt.Printf("trying goes-bootrom (%s): args %v\n", dev, os.Args)
+	fmt.Printf("trying goes-boot (%s): args %v\n", dev, os.Args)
 	err = syscall.Exec("/sbin/goes-boot", os.Args, os.Environ())
 	fmt.Printf("syscall.Exec (%s) failed: %s\n", dev, err)
 	return
@@ -104,8 +104,9 @@ func execGoesBoot(dev string) (err error) {
 func main() {
 	if os.Args[0] == "/init" {
 		_ = execGoesBoot("/dev/sdb1")
-		_ = execGoesBoot("/dev/sda1")
 		_ = execGoesBoot("/dev/sda6")
+		_ = execGoesBoot("/dev/sda1")
+		_ = execGoesBoot("/dev/sda2")
 	}
 
 	args := os.Args
