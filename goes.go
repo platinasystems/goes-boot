@@ -137,7 +137,7 @@ var Goes = &goes.Goes{
 		"mkdir":   mkdir.Command{},
 		"mknod":   mknod.Command{},
 		"mount":   mount.Command{},
-		"mountd":  mountd.Command(make(chan struct{})),
+		"mountd":  &mountd.Command{},
 		"ping":    ping.Command{},
 		"ps":      ps.Command{},
 		"pwd":     pwd.Command{},

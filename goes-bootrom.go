@@ -81,7 +81,7 @@ var Goes = &goes.Goes{
 		"ls":     ls.Command{},
 		"mkdir":  mkdir.Command{},
 		"mount":  mount.Command{},
-		"mountd": mountd.Command(make(chan struct{})),
+		"mountd": &mountd.Command{},
 		//"ping":      ping.Command{},
 		"ps":        ps.Command{},
 		"reboot":    &reboot.Command{},

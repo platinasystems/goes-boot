@@ -26,11 +26,9 @@ github.com/platinasystems/atsock v0.0.0-20181019220955-c4cc7ae24dbf h1:ChH/cr79N
 github.com/platinasystems/atsock v0.0.0-20181019220955-c4cc7ae24dbf/go.mod h1:1XAb4yaMVNH9PDa7Q4sZmDqHoHSrzUfnGImUuSMpx5U=
 github.com/platinasystems/fdt v1.0.1 h1:JwL/wuYhiU9zE43TTOhX0lsLIaj3Uf5zTf3undY/SkA=
 github.com/platinasystems/fdt v1.0.1/go.mod h1:WSVWH9RpIVY1dEmMk2u6ewQceD2bfFdLVN68cSixbnY=
-github.com/platinasystems/flags v1.0.1 h1:YhuXr+LuV7l9fErXWPS0O1PynaRtDoo0vV/WoXtp4fU=
-github.com/platinasystems/flags v1.0.1/go.mod h1:3t8RybiABfJKBne5suYmfXoKOAK6bnMqr++fqaQ2V9M=
 github.com/platinasystems/go-redis-server v0.0.0-20181030193423-fcb8fa742b73/go.mod h1:/GXF5FQty+9BTtfCsfFuD4/pHf/b2cN3f3Ic0nLagQw=
-github.com/platinasystems/goes v1.17.1 h1:2dFrdv7Bvw10SZ3nEPHpQPq2FO1BVdl8AQ7tyKnWu58=
-github.com/platinasystems/goes v1.17.1/go.mod h1:vRoiUbvMr3zIXfSnQTvbKpGM6rIrCUeHc+/jKDGCTFs=
+github.com/platinasystems/goes v1.17.3 h1:F3Mh9GH9cv8JJYBBrcCbe0VUGc7WEG5x1aeVUGfcQ9c=
+github.com/platinasystems/goes v1.17.3/go.mod h1:vRoiUbvMr3zIXfSnQTvbKpGM6rIrCUeHc+/jKDGCTFs=
 github.com/platinasystems/gpio v1.3.0/go.mod h1:UsR1pB6U/S7Ql6RDrF/S6rMJqWOiZu3H2mKQeEe4v7U=
 github.com/platinasystems/ioport v0.0.1 h1:YIrQV/oix3ENpzxi3Atw0UxW2JV21OhPR2VbJ6LUC3M=
 github.com/platinasystems/ioport v0.0.1/go.mod h1:hfzDUTcaOvxYi0bwMY50WVOenxuO9GQu1k55K9nkXTg=
@@ -40,8 +38,6 @@ github.com/platinasystems/liner v0.0.0-20170801164932-8dd8fbd0e16d/go.mod h1:5N7
 github.com/platinasystems/loopback v0.0.2/go.mod h1:L363iEtOA7dYJkxGa0b81/0hiSY34/H084Kben/DDRA=
 github.com/platinasystems/memio v0.0.0-20181109233200-08a432045d57/go.mod h1:5432a+C/LwmCPg543MFUCCzgTaEpAURrTC01os0/8k8=
 github.com/platinasystems/nvram v1.0.0/go.mod h1:00d+9njUcsmFqRNdpmpoY1m5YihPUrQ9mNr9K4BqoEA=
-github.com/platinasystems/parms v1.0.0 h1:pLTnredJUqeet4KoylUe+VVkX/geFORdstHLdZgwSmo=
-github.com/platinasystems/parms v1.0.0/go.mod h1:PBi8SO7fo+s+qLsAHH3QAqAPzO2dLHWca/DM+2vKPn0=
 github.com/platinasystems/redis v1.2.0 h1:Pyoc4Jkl/CfQn44XxpBB4ND4ciU4T9cSfp3xmCaJG+A=
 github.com/platinasystems/redis v1.2.0/go.mod h1:lyuhkHpfn6y21/nMn7H6pbBuPk1D8pflwsatn4OIl8M=
 github.com/platinasystems/ssh_key_helper v0.0.1/go.mod h1:3OvmQYpvUh+0PJeOrw3O5B/VLzZTbGmcrSLTF4ahSPs=
