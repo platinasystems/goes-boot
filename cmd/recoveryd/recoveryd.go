@@ -49,6 +49,10 @@ func (c *Command) Goes(g *goes.Goes) { c.g = g }
 func (*Command) Kind() cmd.Kind { return cmd.Daemon }
 
 func (c *Command) Main(args ...string) error {
+	if len(args) > 0 {
+		c.Url = args[0]
+		args = args[1:]
+	}
 	b := &backoff.Backoff{
 		Min:    10 * time.Second,
 		Max:    240 * time.Second,
