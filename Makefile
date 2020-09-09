@@ -11,5 +11,6 @@ clean:
 
 bindeb-pkg:
 	debuild -e SSH_AUTH_SOCK -i -us -uc -I -Iworktrees --lintian-opts --profile debian
+	cp *.cpio.xz ..
 
 .PHONY: goes-boot install bindeb-pkg clean
