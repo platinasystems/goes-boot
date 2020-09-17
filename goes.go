@@ -84,6 +84,8 @@ import (
 	"github.com/platinasystems/goes/lang"
 )
 
+var Version = "(devel)"
+
 var Goes = &goes.Goes{
 	NAME:    name,
 	APROPOS: Apropos,
@@ -163,7 +165,7 @@ var Goes = &goes.Goes{
 				"cmdline":   cmdline.Command{},
 				"iminfo":    iminfo.Command{},
 				"machine":   Machine,
-				"version":   version.Command{},
+				"version":   &version.Command{V: Version},
 			},
 		},
 
