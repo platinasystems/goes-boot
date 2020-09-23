@@ -1,9 +1,21 @@
-goes-boot (2.1~alpha.0) UNRELEASED; urgency=medium
+goes-boot (2.1.0) stretch; urgency=medium
 
   * recoveryd: Initial commit
   * goes: Update to v1.17.0
+  * recoveryd: Fix mount arguments
+  * recoveryd: Change URLs to platina.io/goes
+  * goes-boot: Update to goes v1.17.1
+  * main-bootrom: Add sda2; try sda6 before sda1; fix announcement text
+  * goes-boot{rom}.go: Update vo goes 1.17.3
+  * goes-boot: Add recoveryd (but don't start it automatically)
+  * recoveryd: Add URL paramater to load alternative recovery images
+  * goes-boot: Add install command
+  * go.sum: Update from go mod tidy
+  * Makefile: Copy *.cpio.xz into parent directory
+  * goes-boot: Update to goes v1.18.2
+  * goes-boot: Update to goes 1.18.3
 
- -- Kevin Paul Herbert <kph@platinasystems.com>  Wed, 05 Aug 2020 20:24:05 -0400
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Wed, 23 Sep 2020 09:35:46 -0700
 
 goes-boot (2.0.0) stretch; urgency=medium
 
