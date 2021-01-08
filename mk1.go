@@ -25,5 +25,11 @@ func disableBootdog() (err error) {
 	if err != nil {
 		return fmt.Errorf("Error in Outb(0x604, %x): %s", b, err)
 	}
+	qspi := 0
+	if b&0x80 != 0 {
+		qspi = 1
+	}
+	fmt.Printf("Booted from QSPI%d\n", qspi)
+
 	return
 }
