@@ -1,3 +1,11 @@
+goes-boot (2.1.2) stretch; urgency=medium
+
+  * goes-boot: Report the QSPI we are booted off of
+  * goes-boot: Update to goes v1.18.7
+  * goes-boot: Ensure we update QSPI0 regardless of what we booted off of
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Thu, 28 Jan 2021 13:36:37 -0700
+
 goes-boot (2.1.1) stretch; urgency=medium
 
   * goes-boot: Update to goes v1.18.4

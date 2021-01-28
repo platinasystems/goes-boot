@@ -61,6 +61,7 @@ import (
 	"github.com/platinasystems/goes/cmd/mount"
 	"github.com/platinasystems/goes/cmd/mountd"
 	"github.com/platinasystems/goes/cmd/ping"
+	"github.com/platinasystems/goes/cmd/platina/mk1/qspi"
 	"github.com/platinasystems/goes/cmd/ps"
 	"github.com/platinasystems/goes/cmd/pwd"
 	"github.com/platinasystems/goes/cmd/reboot"
@@ -152,6 +153,7 @@ var Goes = &goes.Goes{
 		"ping":      ping.Command{},
 		"ps":        ps.Command{},
 		"pwd":       pwd.Command{},
+		"qspi":      qspi.Command{},
 		"reboot":    &reboot.Command{},
 		"recoveryd": &recoveryd.Command{Url: recoveryUrl},
 		"reload":    reload.Command{},

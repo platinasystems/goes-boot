@@ -30,6 +30,7 @@ import (
 	"github.com/platinasystems/goes/cmd/mount"
 	"github.com/platinasystems/goes/cmd/mountd"
 	//	"github.com/platinasystems/goes/cmd/ping"
+	"github.com/platinasystems/goes/cmd/platina/mk1/qspi"
 	"github.com/platinasystems/goes/cmd/ps"
 	"github.com/platinasystems/goes/cmd/reboot"
 	"github.com/platinasystems/goes/cmd/slashinit"
@@ -84,6 +85,7 @@ var Goes = &goes.Goes{
 		"mountd": &mountd.Command{},
 		//"ping":      ping.Command{},
 		"ps":        ps.Command{},
+		"qspi":      qspi.Command{},
 		"reboot":    &reboot.Command{},
 		"recoveryd": &recoveryd.Command{Url: recoveryUrl},
 		"/init":     &slashinit.Command{Hook: disableBootdog},

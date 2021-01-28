@@ -19,7 +19,7 @@ Description: goes-boot package for qemu-system-x86_64
 Package: goes-boot-mk1
 Architecture: any
 Depends: ${misc:Depends},
- flashrom (>=1.1),
+ flashrom (>=1.1), goes-platina-mk1 (>=2.1.5),
  dmidecode
 Description: goes-boot package for the Platina MK1
  Boot software for the Platina MK1 based on goes-boot.

@@ -21,6 +21,7 @@ set -e
 case "$1" in
     configure)
 	[ "`dmidecode -s system-manufacturer`" = "Intel" -a "`dmidecode -s system-product-name`" = "Camelback Mountain Platina DC" ] && BM=":boardmismatch=force"
+	/sbin/goes-platina-mk1 qspi 0
 	flashrom -p internal$BM -l /usr/share/goes-boot/platina-mk1-flash-layout.xml \
 		 -i bios -w /usr/share/goes-boot/coreboot-platina-mk1.rom \
 		 --noverify-all

@@ -8,7 +8,7 @@ package main
 
 import (
 	"fmt"
-
+	"github.com/platinasystems/goes/external/log"
 	"github.com/platinasystems/ioport"
 )
 
@@ -29,7 +29,7 @@ func disableBootdog() (err error) {
 	if b&0x80 != 0 {
 		qspi = 1
 	}
-	fmt.Printf("Booted from QSPI%d\n", qspi)
+	log.Printf("alert", "Booted from QSPI%d", qspi)
 
 	return
 }
