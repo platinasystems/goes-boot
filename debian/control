@@ -24,4 +24,12 @@ Depends: ${misc:Depends},
 Description: goes-boot package for the Platina MK1
  Boot software for the Platina MK1 based on goes-boot.
 
+Package: goes-boot-mk1-factory
+Architecture: any
+Depends: ${misc:Depends},
+ flashrom (>=1.1), goes-platina-mk1 (>=2.1.5),
+ dmidecode, goes-boot-mk1 (>= ${binary:Version})
+Description: goes-boot package for the Platina MK1
+ Boot software for the Platina MK1 based on goes-boot.
+
 

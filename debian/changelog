@@ -1,3 +1,10 @@
+goes-boot (2.1.3) stretch; urgency=medium
+
+  * goes-boot: Improve boot status reporting
+  * goes-boot: Create goes-boot-mk1-factory to update QSPI1
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Thu, 04 Feb 2021 17:33:33 -0700
+
 goes-boot (2.1.2) stretch; urgency=medium
 
   * goes-boot: Report the QSPI we are booted off of
