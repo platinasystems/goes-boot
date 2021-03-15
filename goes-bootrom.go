@@ -31,6 +31,7 @@ import (
 	"github.com/platinasystems/goes/cmd/mountd"
 	//	"github.com/platinasystems/goes/cmd/ping"
 	"github.com/platinasystems/goes/cmd/platina/mk1/qspi"
+	"github.com/platinasystems/goes/cmd/platina/mk1/toggle"
 	"github.com/platinasystems/goes/cmd/ps"
 	"github.com/platinasystems/goes/cmd/reboot"
 	"github.com/platinasystems/goes/cmd/slashinit"
@@ -95,6 +96,7 @@ var Goes = &goes.Goes{
 		"stty":      stty.Command{},
 		"[":         testcmd.Command{},
 		"then":      &thencmd.Command{},
+		"toggle":    &toggle.Command{},
 		"true":      truecmd.Command{},
 		"umount":    umount.Command{},
 		"wget":      wget.Command{},
