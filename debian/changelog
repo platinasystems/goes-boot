@@ -1,8 +1,24 @@
-goes-boot (2.2.0) stretch; urgency=medium
+goes-boot (2.1.4) stretch; urgency=medium
 
-  * goes-boot: Update kernel to v5.4.97
+  * linux: Update kernel to 4.18.20.334
+  * coreboot: Update to 4.11-34-platina
+  * goes-bootrom: Quiet boot chatter
+  * goes-bootrom: Add partition probing code
+  * goes-bootrom: Add toggle command
+  * coreboot: Replace onie-i2c-addr property with qsfp-i2c-addrs
+  * coreboot: Add link-mac-addresses propertyty
+  * coreboot: Add onie-i2c-addr property
+  * coreboot: Add links and link-count properties
+  * linux: Add i2c/SMBUS/GPIO so that toggle command can work
+  * goes-boot: Add toggle command
+  * goes-boot: Set dev->enabled to false on I2C write failure
+  * goes-boot: Add probing of ONIE EEPROM
+  * goes-boot: Add XETH devices with compatible property platina,mk1
+  * goes-boot: Add base-port property integer 0 or 1
+  * goes-boot: Add absent-gpios, int-gpios, lpmode-gpios, and reset-gpios
+  * goes-boot: Experimentally set i2c-mux-idle-disconnect
 
- -- Kevin Paul Herbert <kph@platinasystems.com>  Thu, 11 Feb 2021 15:54:16 -0700
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Thu, 25 Mar 2021 17:34:53 -0700
 
 goes-boot (2.1.3) stretch; urgency=medium
 
