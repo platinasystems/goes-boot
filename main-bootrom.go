@@ -49,14 +49,17 @@ func setupGoesBoot(dev string) (err error) {
 	err = syscall.Mount(dev, "/boot", "ext4", syscall.MS_RDONLY,
 		"")
 	if err != nil {
-		fmt.Printf("syscall.Mount(/boot) failed: %s\n", err)
+		if !os.IsNotExist(err) {
+			fmt.Printf("syscall.Mount(%s) failed: %s\n", dev, err)
+		}
 		return
 	}
 
 	defer func() {
 		err = syscall.Unmount("/boot", 0)
 		if err != nil {
-			fmt.Printf("syscall.Unmount(/boot) failed: %s\n", err)
+			fmt.Printf("syscall.Unmount(%s) failed: %s\n",
+				dev, err)
 			return
 		}
 	}()
@@ -90,23 +93,26 @@ func setupGoesBoot(dev string) (err error) {
 	return nil
 }
 
-func execGoesBoot(dev string) (err error) {
-	err = setupGoesBoot(dev)
-	if err != nil {
+func execGoesBoot(dev string) {
+	if err := setupGoesBoot(dev); err != nil {
 		return
 	}
+	if _, err := os.Stat("/sbin/goes-boot"); err != nil {
+		return
+	}
+
 	fmt.Printf("trying goes-boot (%s): args %v\n", dev, os.Args)
-	err = syscall.Exec("/sbin/goes-boot", os.Args, os.Environ())
+	err := syscall.Exec("/sbin/goes-boot", os.Args, os.Environ())
 	fmt.Printf("syscall.Exec (%s) failed: %s\n", dev, err)
 	return
 }
 
 func main() {
 	if os.Args[0] == "/init" {
-		_ = execGoesBoot("/dev/sdb1")
-		_ = execGoesBoot("/dev/sda6")
-		_ = execGoesBoot("/dev/sda1")
-		_ = execGoesBoot("/dev/sda2")
+		execGoesBoot("/dev/sdb1")
+		execGoesBoot("/dev/sda6")
+		execGoesBoot("/dev/sda1")
+		execGoesBoot("/dev/sda2")
 	}
 
 	args := os.Args
