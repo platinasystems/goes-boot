@@ -13,6 +13,8 @@ import (
 	"os"
 	"path/filepath"
 	"syscall"
+
+	"github.com/platinasystems/goes/external/partitions"
 )
 
 func copyFile(src, dst string, perm os.FileMode) (err error) {
@@ -46,12 +48,23 @@ func setupGoesBoot(dev string) (err error) {
 		}
 	}()
 
-	err = syscall.Mount(dev, "/boot", "ext4", syscall.MS_RDONLY,
-		"")
+	sb, err := partitions.ReadSuperBlock(dev)
 	if err != nil {
 		if !os.IsNotExist(err) {
-			fmt.Printf("syscall.Mount(%s) failed: %s\n", dev, err)
+			fmt.Printf("partitions.ReadSuperBlock(%s) failed: %s\n",
+				dev, err)
 		}
+		return
+	}
+	if sb == nil {
+		fmt.Printf("Unable to recognize partition format on %s\n",
+			dev)
+		return
+	}
+	err = syscall.Mount(dev, "/boot", sb.Kind(), syscall.MS_RDONLY, "")
+	if err != nil {
+		fmt.Printf("syscall.Mount(%s[%s]) failed: %s\n", dev, sb.Kind(),
+			err)
 		return
 	}
 
