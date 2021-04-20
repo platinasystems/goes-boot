@@ -10,7 +10,7 @@ clean:
 	rm -rf debian/.debhelper debian/goes-boot-mk1 debian/goes-boot-example-amd64
 
 bindeb-pkg:
-	debuild -e SSH_AUTH_SOCK -i -us -uc -I -Iworktrees --lintian-opts --profile debian
+	debuild -e SSH_AUTH_SOCK -e GIT_SSH_COMMAND -i -us -uc -I -Iworktrees --lintian-opts --profile debian
 	cp *.cpio.xz ..
 
 .PHONY: goes-boot install bindeb-pkg clean
