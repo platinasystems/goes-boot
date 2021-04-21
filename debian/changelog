@@ -1,3 +1,9 @@
+goes-boot (2.2~alpha.0) stretch; urgency=medium
+
+  * goes-boot: Propogate GIT_SSH_COMMAND through debuild
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Wed, 21 Apr 2021 14:13:43 -0700
+
 goes-boot (2.1.6) stretch; urgency=medium
 
   * goes: install: Use Debian packages for APT repo and GPG key
