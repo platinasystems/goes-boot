@@ -1,3 +1,10 @@
+goes-boot (2.2~alpha.1) stretch; urgency=medium
+
+  * coreboot: Bump to 4.11-35 [add ACPI properties for I2C mux/stream driver]
+  * linux: Bump to v5.10.28.30-platina
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Fri, 14 May 2021 10:33:07 -0700
+
 goes-boot (2.2~alpha.0) stretch; urgency=medium
 
   * goes-boot: Propogate GIT_SSH_COMMAND through debuild
