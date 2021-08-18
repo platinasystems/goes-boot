@@ -1,3 +1,9 @@
+goes-boot (2.2~alpha.2) stretch; urgency=medium
+
+  * goes: Update to 1.19.1
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Wed, 18 Aug 2021 15:49:29 -0700
+
 goes-boot (2.2~alpha.1) stretch; urgency=medium
 
   * coreboot: Bump to 4.11-35 [add ACPI properties for I2C mux/stream driver]
