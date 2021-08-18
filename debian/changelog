@@ -1,3 +1,9 @@
+goes-boot (2.1.6) stretch; urgency=medium
+
+  * goes: install: Use Debian packages for APT repo and GPG key
+
+ -- Kevin Paul Herbert <kph@platinasystems.com>  Wed, 18 Aug 2021 14:53:02 -0700
+
 goes-boot (2.1.5) stretch; urgency=medium
 
   * goes: Create /dev/fd link in installer
