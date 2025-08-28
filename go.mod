@@ -7,7 +7,7 @@ require (
 	github.com/platinasystems/ioport v0.0.1
 	github.com/platinasystems/redis v1.2.0
 	github.com/platinasystems/url v1.1.1
-	github.com/ulikunitz/xz v0.5.8
+	github.com/ulikunitz/xz v0.5.14
 )
 
 go 1.15
